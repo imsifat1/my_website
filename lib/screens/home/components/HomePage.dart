@@ -29,50 +29,15 @@ class HomePage extends StatelessWidget {
                     : CrossAxisAlignment.center,
                 children: <Widget>[
                   if (isMobile(context))
-                    Stack(
-                      children: [
-                        Positioned(
-                            right: 0,
-                            // top: -100,
-                            child: Container(
-                              decoration: const BoxDecoration(
-                                  gradient: LinearGradient(
-                                      begin: Alignment.centerLeft,
-                                      end: Alignment.centerRight,
-                                      colors: [
-                                    Color.fromRGBO(36, 11, 54, 1.0),
-                                    Color(0xFFEB7418),
-                                  ])),
-                              height: 200,
-                              width: 200,
-                            )),
-                        Positioned(
-                            left: 0,
-                            bottom: 0,
-                            // top: -100,
-                            child: Container(
-                              decoration: const BoxDecoration(
-                                  gradient: LinearGradient(
-                                      begin: Alignment.centerLeft,
-                                      end: Alignment.centerRight,
-                                      colors: [
-                                    Color(0xFFEB7418),
-                                    Color.fromRGBO(36, 11, 54, 1.0)
-                                  ])),
-                              height: 200,
-                              width: 200,
-                            )),
-                        Center(
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Image.asset(
-                              'assets/images/main2.gif',
-                              height: size.height * 0.3,
-                              fit: BoxFit.fill,
-                            ),
-                          ),
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Image.asset(
+                          'assets/images/main4.gif',
+                          height: size.height * 0.3,
+                          fit: BoxFit.contain,
                         ),
-                      ],
+                      ),
                     ),
                   RichText(
                       text: TextSpan(children: [
@@ -136,47 +101,12 @@ class HomePage extends StatelessWidget {
                 // decoration: BoxDecoration(
                 //   border: Border.all(color: Colors.red, width: 10),
                 // ),
-                child: Stack(
-                  children: [
-                    Positioned(
-                        right: 0,
-                        // top: -100,
-                        child: Container(
-                          decoration: const BoxDecoration(
-                              gradient: LinearGradient(
-                                  begin: Alignment.centerLeft,
-                                  end: Alignment.centerRight,
-                                  colors: [
-                                Color.fromRGBO(36, 11, 54, 1.0),
-                                Color(0xFFEB7418),
-                              ])),
-                          height: 300,
-                          width: 300,
-                        )),
-                    Positioned(
-                        left: 0,
-                        bottom: 0,
-                        // top: -100,
-                        child: Container(
-                          decoration: const BoxDecoration(
-                              gradient: LinearGradient(
-                                  begin: Alignment.centerLeft,
-                                  end: Alignment.centerRight,
-                                  colors: [
-                                Color(0xFFEB7418),
-                                Color.fromRGBO(36, 11, 54, 1.0)
-                              ])),
-                          height: 300,
-                          width: 300,
-                        )),
-                    Center(
-                      child: Padding(
-                        padding: const EdgeInsets.all(12.0),
-                        child: Image.asset('assets/images/main2.gif',
-                            height: size.height * 0.7, fit: BoxFit.cover),
-                      ),
-                    ),
-                  ],
+                child: Center(
+                  child: Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: Image.asset('assets/images/main4.gif',
+                        height: size.height * 0.7, fit: BoxFit.contain),
+                  ),
                 ),
               ))
           ],

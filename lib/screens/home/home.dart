@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_website/components/footer.dart';
 import 'package:my_website/components/header.dart';
 import 'package:my_website/components/side_menu.dart';
-import 'package:my_website/screens/AboutMe.dart';
+import 'package:my_website/screens/AboutMe/AboutMe.dart';
 import 'package:my_website/screens/ContactMe.dart';
 import 'package:my_website/screens/Projects.dart';
 
@@ -30,16 +30,6 @@ class HomeScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: SafeArea(
           child: Container(
-            // color: darkMood ? Color(0xFFFEFEFE) : Colors.black,
-            // decoration: BoxDecoration(border: Border.all(color: Colors.red)
-            //   gradient: LinearGradient(
-            //       begin: Alignment.centerLeft,
-            //       end: Alignment.centerRight,
-            //       colors: [
-            //         Color.fromARGB(255, 26, 164, 206),
-            //         Color.fromRGBO(36, 11, 54, 1.0)
-            //       ]),
-            // ),
             width: size.width,
             constraints: BoxConstraints(minHeight: size.height),
             child: Column(
@@ -61,7 +51,7 @@ Widget BodyFunction() {
       return const HomePage();
       break;
     case 1:
-      return const AboutMe();
+      return AboutMe();
       break;
     case 2:
       return const Projects();

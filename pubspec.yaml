@@ -43,6 +43,7 @@ dev_dependencies:
   get: ^4.6.1
   dio: ^4.0.4
   http: ^0.13.4
+  url_launcher: ^6.0.20
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
@@ -62,6 +63,20 @@ flutter:
     - assets/images/main.png
     - assets/images/main2.gif
     - assets/images/main3.gif
+    - assets/images/main4.gif
+    - assets/images/main5.gif
+    - assets/images/skill.gif
+    - assets/images/education1.gif
+    - assets/images/education2.gif
+    - assets/images/contactus1.jpg
+    - assets/images/contactus2.jpg
+    - assets/images/contactus3.jpg
+    - assets/images/contactus4.jpg
+
+    - assets/icons/fbIcon.png
+    - assets/icons/githubIcon.png
+    - assets/icons/linkedinIcon.png
+    
 
 fonts:
   - family: Montserrat

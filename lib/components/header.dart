@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:my_website/responsive.dart';
 import 'package:get/get.dart';
-import 'package:my_website/screens/AboutMe.dart';
+import 'package:my_website/screens/AboutMe/AboutMe.dart';
 
 import '../constants.dart';
 import 'menu_item.dart';
 
 RxBool darkMood = false.obs;
-int index = 1;
+int index = 3;
 
 class Header extends StatefulWidget {
   const Header({

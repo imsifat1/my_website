@@ -35,6 +35,9 @@ class _SideMenuState extends State<SideMenu> {
                         : Icon(Icons.wb_sunny),
                     color: Colors.grey,
                   )),
+              SizedBox(
+                height: 10,
+              ),
               NavItem(
                 title: 'Home',
                 tapEvent: () {
@@ -42,6 +45,9 @@ class _SideMenuState extends State<SideMenu> {
                     index = 0;
                   });
                 },
+              ),
+              SizedBox(
+                height: 10,
               ),
               NavItem(
                 title: 'About Me',
@@ -51,6 +57,9 @@ class _SideMenuState extends State<SideMenu> {
                   });
                 },
               ),
+              SizedBox(
+                height: 10,
+              ),
               NavItem(
                 title: 'Projects',
                 tapEvent: () {
@@ -59,6 +68,9 @@ class _SideMenuState extends State<SideMenu> {
                   });
                 },
               ),
+              SizedBox(
+                height: 10,
+              ),
               NavItem(
                 title: 'Contact Me',
                 tapEvent: () {
@@ -66,6 +78,9 @@ class _SideMenuState extends State<SideMenu> {
                     index = 2;
                   });
                 },
+              ),
+              SizedBox(
+                height: 10,
               ),
             ],
           ),

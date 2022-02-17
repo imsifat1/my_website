@@ -3,11 +3,8 @@ import 'package:flutter/material.dart';
 import '../constants.dart';
 
 class NavItem extends StatelessWidget {
-  const NavItem({
-    Key? key,
-    required this.title,
-    required this.tapEvent
-  }) : super(key: key);
+  const NavItem({Key? key, required this.title, required this.tapEvent})
+      : super(key: key);
 
   final String title;
   final GestureTapCallback tapEvent;
@@ -21,10 +18,7 @@ class NavItem extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 15),
         child: Text(
           title,
-          style: TextStyle(
-            color: kTextColor,
-            fontWeight: FontWeight.w300
-          ),
+          style: TextStyle(fontWeight: FontWeight.w300),
         ),
       ),
     );
