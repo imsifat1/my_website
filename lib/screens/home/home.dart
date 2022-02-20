@@ -4,7 +4,7 @@ import 'package:my_website/components/header.dart';
 import 'package:my_website/components/side_menu.dart';
 import 'package:my_website/screens/AboutMe/AboutMe.dart';
 import 'package:my_website/screens/ContactMe.dart';
-import 'package:my_website/screens/Projects.dart';
+import 'package:my_website/screens/Projects/Projects.dart';
 
 import 'components/HomePage.dart';
 
@@ -54,7 +54,7 @@ Widget BodyFunction() {
       return AboutMe();
       break;
     case 2:
-      return const Projects();
+      return Projects();
       break;
     case 3:
       return const ContactMe();

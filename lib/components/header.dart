@@ -8,7 +8,7 @@ import '../constants.dart';
 import 'menu_item.dart';
 
 RxBool darkMood = false.obs;
-int index = 3;
+int index = 2;
 
 class Header extends StatefulWidget {
   const Header({

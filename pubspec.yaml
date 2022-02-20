@@ -40,6 +40,7 @@ dev_dependencies:
     sdk: flutter
 
   google_fonts: ^2.1.0
+  flutter_markdown: ^0.6.9
   get: ^4.6.1
   dio: ^4.0.4
   http: ^0.13.4
@@ -72,6 +73,11 @@ flutter:
     - assets/images/contactus2.jpg
     - assets/images/contactus3.jpg
     - assets/images/contactus4.jpg
+    - assets/project/shopping.png
+    - assets/project/shopping2.gif
+    - assets/project/calculator.png
+    - assets/project/calculator2.gif
+    - assets/project/website.gif
 
     - assets/icons/fbIcon.png
     - assets/icons/githubIcon.png
