@@ -14,70 +14,70 @@ class SideMenu extends StatefulWidget {
 class _SideMenuState extends State<SideMenu> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: double.infinity,
-      color: Colors.white,
-      child: SafeArea(
-        child: SingleChildScrollView(
-          padding: EdgeInsets.all(20),
-          child: Column(
-            children: [
-              Obx(() => IconButton(
-                    onPressed: () {
-                      darkMood.toggle();
-                      darkMood == false
-                          ? Get.changeTheme(ThemeData.light())
-                          : Get.changeTheme(ThemeData.dark());
-                      // Get.changeTheme(ThemeData.dark());
+    return Obx(() => Container(
+          height: double.infinity,
+          color: darkMood.value ? Colors.white : Colors.black,
+          child: SafeArea(
+            child: SingleChildScrollView(
+              padding: EdgeInsets.all(20),
+              child: Column(
+                children: [
+                  Obx(() => IconButton(
+                        onPressed: () {
+                          darkMood.toggle();
+                          darkMood == false
+                              ? Get.changeTheme(ThemeData.light())
+                              : Get.changeTheme(ThemeData.dark());
+                          // Get.changeTheme(ThemeData.dark());
+                        },
+                        icon: darkMood == false
+                            ? Icon(Icons.brightness_3)
+                            : Icon(Icons.wb_sunny),
+                        color: Colors.grey,
+                      )),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  NavItem(
+                    title: 'Home',
+                    tapEvent: () {
+                      index.value = 0;
                     },
-                    icon: darkMood == false
-                        ? Icon(Icons.brightness_3)
-                        : Icon(Icons.wb_sunny),
-                    color: Colors.grey,
-                  )),
-              SizedBox(
-                height: 10,
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  NavItem(
+                    title: 'About Me',
+                    tapEvent: () {
+                      index.value = 1;
+                    },
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  NavItem(
+                    title: 'Projects',
+                    tapEvent: () {
+                      index.value = 2;
+                    },
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  NavItem(
+                    title: 'Contact Me',
+                    tapEvent: () {
+                      index.value = 2;
+                    },
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                ],
               ),
-              NavItem(
-                title: 'Home',
-                tapEvent: () {
-                  index.value = 0;
-                },
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              NavItem(
-                title: 'About Me',
-                tapEvent: () {
-                  index.value = 1;
-                },
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              NavItem(
-                title: 'Projects',
-                tapEvent: () {
-                  index.value = 2;
-                },
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              NavItem(
-                title: 'Contact Me',
-                tapEvent: () {
-                  index.value = 2;
-                },
-              ),
-              SizedBox(
-                height: 10,
-              ),
-            ],
+            ),
           ),
-        ),
-      ),
-    );
+        ));
   }
 }

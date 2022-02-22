@@ -96,6 +96,9 @@ flutter:
     - assets/icons/websiteLogo.png
     - assets/icons/WebsiteLogo1.png
     - assets/icons/WebsiteLogo2.png
+    - assets/icons/playStore.png
+    - assets/icons/StackOverFlowIcon1.png
+    - assets/icons/StackOverFlowIcon2.png
     
 
 fonts:

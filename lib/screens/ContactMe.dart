@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_website/components/header.dart';
 import 'package:my_website/responsive.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:get/get.dart';
 
 final mobileNumber = "tel:01515610592";
 final email = "https://google.com";
@@ -51,99 +52,105 @@ class ContactMe extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                    width: !isTab(context) ? size.width / 4 : size.width / 3,
-                    color: darkMood == false
-                        ? Colors.white
-                        : Color.fromARGB(255, 61, 55, 55),
-                    child: Padding(
-                      padding: const EdgeInsets.all(30.0),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          SizedBox(height: 10),
-                          Icon(
-                            Icons.phone,
-                            size: 40,
-                          ),
-                          SizedBox(height: 10),
-                          Text(
-                            "Talk To Me?",
-                            style: TextStyle(
-                                fontSize: titleSize,
-                                fontWeight: FontWeight.bold),
-                          ),
-                          SizedBox(height: 10),
-                          Text(
-                            "Want To talk to me? Just pick up the phone and call me.",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: SubTitleSize,
+                Obx(
+                  () => Container(
+                      width: !isTab(context) ? size.width / 4 : size.width / 3,
+                      color: darkMood == false
+                          ? Colors.white
+                          : Color.fromARGB(255, 61, 55, 55),
+                      child: Padding(
+                        padding: const EdgeInsets.all(30.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            SizedBox(height: 10),
+                            Icon(
+                              Icons.phone,
+                              size: 40,
                             ),
-                          ),
-                          SizedBox(height: 10),
-                          MaterialButton(
-                            onPressed: () {
-                              launch(mobileNumber);
-                            },
-                            child: SelectableText(
-                              "+880 1515610592",
+                            SizedBox(height: 10),
+                            Text(
+                              "Talk To Me?",
                               style: TextStyle(
-                                  fontSize: SubTitleSize, color: Colors.orange),
+                                  fontSize: titleSize,
+                                  fontWeight: FontWeight.bold),
                             ),
-                          ),
-                        ],
-                      ),
-                    )),
+                            SizedBox(height: 10),
+                            Text(
+                              "Want To talk to me? Just pick up the phone and call me.",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: SubTitleSize,
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            MaterialButton(
+                              onPressed: () {
+                                launch(mobileNumber);
+                              },
+                              child: SelectableText(
+                                "+880 1515610592",
+                                style: TextStyle(
+                                    fontSize: SubTitleSize,
+                                    color: Colors.orange),
+                              ),
+                            ),
+                          ],
+                        ),
+                      )),
+                ),
                 SizedBox(
                   width: 30,
                 ),
-                Container(
-                    width: !isTab(context) ? size.width / 4 : size.width / 3,
-                    color: darkMood == false
-                        ? Colors.white
-                        : Color.fromARGB(255, 61, 55, 55),
-                    child: Padding(
-                      padding: const EdgeInsets.all(30.0),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          SizedBox(height: 10),
-                          Icon(
-                            Icons.message,
-                            size: 40,
-                          ),
-                          SizedBox(height: 10),
-                          Text(
-                            "Email Me?",
-                            style: TextStyle(
-                                fontSize: titleSize,
-                                fontWeight: FontWeight.bold),
-                          ),
-                          SizedBox(height: 10),
-                          Text(
-                            "You can email me through this email Id.",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: SubTitleSize,
+                Obx(
+                  () => Container(
+                      width: !isTab(context) ? size.width / 4 : size.width / 3,
+                      color: darkMood == false
+                          ? Colors.white
+                          : Color.fromARGB(255, 61, 55, 55),
+                      child: Padding(
+                        padding: const EdgeInsets.all(30.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            SizedBox(height: 10),
+                            Icon(
+                              Icons.message,
+                              size: 40,
                             ),
-                          ),
-                          SizedBox(height: 10),
-                          MaterialButton(
-                            onPressed: () {
-                              launch(email);
-                            },
-                            child: SelectableText(
-                              "imsifat1@gmail.com",
+                            SizedBox(height: 10),
+                            Text(
+                              "Email Me?",
                               style: TextStyle(
-                                  fontSize: SubTitleSize, color: Colors.orange),
+                                  fontSize: titleSize,
+                                  fontWeight: FontWeight.bold),
                             ),
-                          ),
-                        ],
-                      ),
-                    )),
+                            SizedBox(height: 10),
+                            Text(
+                              "You can email me through this email Id.",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: SubTitleSize,
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            MaterialButton(
+                              onPressed: () {
+                                launch(email);
+                              },
+                              child: SelectableText(
+                                "imsifat1@gmail.com",
+                                style: TextStyle(
+                                    fontSize: SubTitleSize,
+                                    color: Colors.orange),
+                              ),
+                            ),
+                          ],
+                        ),
+                      )),
+                ),
               ],
             ),
           ),

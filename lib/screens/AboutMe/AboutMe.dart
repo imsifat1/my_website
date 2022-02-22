@@ -14,7 +14,7 @@ class AboutMe extends StatelessWidget {
         margin: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
         height: size.height,
         width: size.width * 0.7,
-        child: ListView(children: [
+        child: ListView(shrinkWrap: true, children: [
           Center(
             child: Text(
               "About Me",

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:my_website/components/header.dart';
 import 'package:my_website/components/main_button.dart';
 import 'package:my_website/responsive.dart';
-
+import 'package:get/get.dart';
 import '../../../constants.dart';
 
 class HomePage extends StatelessWidget {
@@ -39,21 +40,24 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                     ),
-                  RichText(
-                      text: TextSpan(children: [
-                    TextSpan(
-                        text: 'Flutter ',
-                        style: TextStyle(
-                            fontSize: isDesktop(context) ? 64 : 32,
-                            fontWeight: FontWeight.w800,
-                            color: kTextColor)),
-                    TextSpan(
-                        text: 'Developer',
-                        style: TextStyle(
-                            fontSize: isDesktop(context) ? 64 : 32,
-                            fontWeight: FontWeight.w800,
-                            color: kPrimaryColor)),
-                  ])),
+                  Obx(
+                    () => RichText(
+                        text: TextSpan(children: [
+                      TextSpan(
+                          text: 'Flutter ',
+                          style: TextStyle(
+                              fontSize: isDesktop(context) ? 64 : 32,
+                              fontWeight: FontWeight.w800,
+                              color:
+                                  darkMood.value ? Colors.white : kTextColor)),
+                      TextSpan(
+                          text: 'Developer',
+                          style: TextStyle(
+                              fontSize: isDesktop(context) ? 64 : 32,
+                              fontWeight: FontWeight.w800,
+                              color: kPrimaryColor)),
+                    ])),
+                  ),
                   Text(
                     'Online Today!',
                     style: TextStyle(
@@ -68,7 +72,7 @@ class HomePage extends StatelessWidget {
                   ),
                   SizedBox(height: 10),
                   Text(
-                    'Help us in making this world a better place for animals.',
+                    'Make it work. Developer Makes Everything Better.',
                     textAlign:
                         isMobile(context) ? TextAlign.center : TextAlign.start,
                     style: TextStyle(
