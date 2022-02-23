@@ -73,15 +73,29 @@ flutter:
     - assets/images/contactus2.jpg
     - assets/images/contactus3.jpg
     - assets/images/contactus4.jpg
+    - assets/images/myPic.jpg
+    - assets/images/myPic2.png
+    - assets/images/bg.png
+
     - assets/project/shopping.png
     - assets/project/shopping2.gif
     - assets/project/calculator.png
     - assets/project/calculator2.gif
     - assets/project/website.gif
+    - assets/project/bmicalculator2.gif
+    - assets/project/bmicalculator.gif
+    - assets/project/weather.gif
+    - assets/project/news.gif
+    - assets/project/sphere.gif
+    - assets/project/corona.gif
+    - assets/project/stackball.png
 
     - assets/icons/fbIcon.png
     - assets/icons/githubIcon.png
     - assets/icons/linkedinIcon.png
+    - assets/icons/websiteLogo.png
+    - assets/icons/WebsiteLogo1.png
+    - assets/icons/WebsiteLogo2.png
     
 
 fonts:

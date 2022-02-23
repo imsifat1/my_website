@@ -3,6 +3,9 @@ import 'package:my_website/responsive.dart';
 import 'package:markdown/markdown.dart' as md;
 import 'package:my_website/screens/Projects/app_details.dart';
 import 'package:my_website/screens/Projects/app_string.dart';
+import 'package:my_website/screens/Projects/flutter_project.dart';
+import 'package:my_website/screens/Projects/game_development.dart';
+import 'package:my_website/screens/Projects/ios_project.dart';
 
 class Projects extends StatelessWidget {
   Projects({Key? key}) : super(key: key);
@@ -10,47 +13,54 @@ class Projects extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Container(
-      height: MediaQuery.of(context).size.height,
-      child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Center(
-              child: Text(
-                "Flutter Apps",
-                style: TextStyle(
-                    color: Colors.red,
-                    fontSize: isDesktop(context) ? 40 : 30,
-                    fontWeight: FontWeight.bold),
+    return Center(
+      child: Container(
+        height: MediaQuery.of(context).size.height,
+        width: isDesktop(context)
+            ? MediaQuery.of(context).size.width * 0.7
+            : MediaQuery.of(context).size.width,
+        child: ListView(
+            // mainAxisAlignment: MainAxisAlignment.center,
+            // crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Center(
+                child: Text(
+                  "Flutter Apps",
+                  style: TextStyle(
+                      color: Colors.red,
+                      fontSize: isDesktop(context) ? 40 : 30,
+                      fontWeight: FontWeight.bold),
+                ),
               ),
-            ),
-            GridView(
-              shrinkWrap: true,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: !isMobile(context) ? 3 : 2),
-              children: [
-                AppDetails(
-                  imageUrl: "assets/project/shopping2.gif",
-                  size: size,
-                  title: "Shopping App",
-                  appDetails: shoppingApp,
+              FlutterApp(context, size),
+              SizedBox(
+                height: 20,
+              ),
+              Center(
+                child: Text(
+                  "iOS Apps",
+                  style: TextStyle(
+                      color: Colors.red,
+                      fontSize: isDesktop(context) ? 40 : 30,
+                      fontWeight: FontWeight.bold),
                 ),
-                AppDetails(
-                  imageUrl: "assets/project/calculator2.gif",
-                  size: size,
-                  title: "Calculator App",
-                  appDetails: calculatorApp,
+              ),
+              iOSApp(context, size),
+              Center(
+                child: Text(
+                  "Game Development",
+                  style: TextStyle(
+                      color: Colors.red,
+                      fontSize: isDesktop(context) ? 40 : 30,
+                      fontWeight: FontWeight.bold),
                 ),
-                AppDetails(
-                  imageUrl: "assets/project/website.gif",
-                  size: size,
-                  title: "Website App",
-                  appDetails: websiteApp,
-                ),
-              ],
-            )
-          ]),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              GameDevelopment(context, size)
+            ]),
+      ),
     );
   }
 }

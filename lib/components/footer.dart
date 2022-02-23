@@ -35,22 +35,17 @@ class DesktopFooter extends StatelessWidget {
               flex: 2,
               child: Row(
                 children: <Widget>[
-                  NavItem(
-                    title: 'Twitter',
-                    tapEvent: () {},
-                  ),
-                  NavItem(
-                    title: 'Facebook',
-                    tapEvent: () {},
-                  ),
-                  NavItem(
-                    title: 'Linkedin',
-                    tapEvent: () {},
-                  ),
-                  NavItem(
-                    title: 'Instagram',
-                    tapEvent: () {},
-                  ),
+                  IconButton(
+                      onPressed: () {},
+                      icon: ImageIcon(AssetImage("assets/icons/fbIcon.png"))),
+                  IconButton(
+                      onPressed: () {},
+                      icon:
+                          ImageIcon(AssetImage("assets/icons/githubIcon.png"))),
+                  IconButton(
+                      onPressed: () {},
+                      icon: ImageIcon(
+                          AssetImage("assets/icons/linkedinIcon.png")))
                 ],
               )),
         ],
@@ -78,22 +73,20 @@ class MobileFooter extends StatelessWidget {
           Wrap(
             alignment: WrapAlignment.center,
             children: <Widget>[
-              NavItem(
-                title: 'Twitter',
-                tapEvent: () {},
-              ),
-              NavItem(
-                title: 'Facebook',
-                tapEvent: () {},
-              ),
-              NavItem(
-                title: 'Linkedin',
-                tapEvent: () {},
-              ),
-              NavItem(
-                title: 'Instagram',
-                tapEvent: () {},
-              ),
+              IconButton(
+                  onPressed: () {},
+                  icon: ImageIcon(
+                    AssetImage(
+                      "assets/icons/fbIcon.png",
+                    ),
+                    color: null,
+                  )),
+              IconButton(
+                  onPressed: () {},
+                  icon: ImageIcon(AssetImage("assets/icons/githubIcon.png"))),
+              IconButton(
+                  onPressed: () {},
+                  icon: ImageIcon(AssetImage("assets/icons/linkedinIcon.png")))
             ],
           )
         ],

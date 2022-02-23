@@ -41,9 +41,7 @@ class _SideMenuState extends State<SideMenu> {
               NavItem(
                 title: 'Home',
                 tapEvent: () {
-                  setState(() {
-                    index = 0;
-                  });
+                  index.value = 0;
                 },
               ),
               SizedBox(
@@ -52,9 +50,7 @@ class _SideMenuState extends State<SideMenu> {
               NavItem(
                 title: 'About Me',
                 tapEvent: () {
-                  setState(() {
-                    index = 1;
-                  });
+                  index.value = 1;
                 },
               ),
               SizedBox(
@@ -63,9 +59,7 @@ class _SideMenuState extends State<SideMenu> {
               NavItem(
                 title: 'Projects',
                 tapEvent: () {
-                  setState(() {
-                    index = 2;
-                  });
+                  index.value = 2;
                 },
               ),
               SizedBox(
@@ -74,9 +68,7 @@ class _SideMenuState extends State<SideMenu> {
               NavItem(
                 title: 'Contact Me',
                 tapEvent: () {
-                  setState(() {
-                    index = 2;
-                  });
+                  index.value = 2;
                 },
               ),
               SizedBox(

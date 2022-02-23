@@ -19,16 +19,19 @@ class SkillSection extends StatelessWidget {
         Expanded(
           child: SkillTree(size: size),
         ),
+        SizedBox(width: 10),
         if (isDesktop(context) || isTab(context))
-          Container(
-            height: size.height * 0.7,
-            width: size.width / 2.5,
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(30),
-              child: Image.asset(
-                "assets/images/skill.gif",
-                height: size.height * 0.7,
-                fit: BoxFit.contain,
+          Expanded(
+            child: Container(
+              height: size.height * 0.7,
+              width: size.width / 2.5,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(30),
+                child: Image.asset(
+                  "assets/images/skill.gif",
+                  height: size.height * 0.7,
+                  fit: BoxFit.contain,
+                ),
               ),
             ),
           )

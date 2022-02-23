@@ -15,11 +15,12 @@ class Intro extends StatelessWidget {
       children: [
         if (isDesktop(context) || isTab(context))
           Container(
-            height: size.height * 0.7,
-            width: size.width / 2.5,
+            height: size.height / 2.5,
+            // width: size.width / 5,
             child: Image.asset(
-              "assets/images/main5.gif",
-              height: size.height * 0.7,
+              "assets/images/myPic2.png",
+              // height: size.height / 3,
+              // width: size.width / 5,
               fit: BoxFit.contain,
             ),
           ),

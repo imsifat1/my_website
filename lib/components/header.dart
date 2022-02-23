@@ -2,13 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:my_website/responsive.dart';
 import 'package:get/get.dart';
-import 'package:my_website/screens/AboutMe/AboutMe.dart';
-
-import '../constants.dart';
 import 'menu_item.dart';
 
 RxBool darkMood = false.obs;
-int index = 2;
+RxInt index = 1.obs;
 
 class Header extends StatefulWidget {
   const Header({
@@ -55,33 +52,25 @@ class _HeaderState extends State<Header> {
                 NavItem(
                   title: 'Home',
                   tapEvent: () {
-                    setState(() {
-                      index = 0;
-                    });
+                    index.value = 0;
                   },
                 ),
                 NavItem(
                   title: 'About Me',
                   tapEvent: () {
-                    setState(() {
-                      index = 1;
-                    });
+                    index.value = 1;
                   },
                 ),
                 NavItem(
                   title: 'Projects',
                   tapEvent: () {
-                    setState(() {
-                      index = 2;
-                    });
+                    index.value = 2;
                   },
                 ),
                 NavItem(
                   title: 'Contact Me',
                   tapEvent: () {
-                    setState(() {
-                      index = 3;
-                    });
+                    index.value = 3;
                   },
                 ),
               ],
