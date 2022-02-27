@@ -7,7 +7,6 @@ import 'package:my_website/screens/AboutMe/AboutMe.dart';
 import 'package:my_website/screens/ContactMe.dart';
 import 'package:my_website/screens/Projects/Projects.dart';
 import 'package:get/get.dart';
-
 import 'components/HomePage.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -64,12 +63,24 @@ class HomeScreen extends StatelessWidget {
                           SizedBox(
                             height: 10,
                           ),
-                          MaterialButton(
-                              color: Colors.orange,
-                              child: Text("Send"),
-                              onPressed: () {
-                                Navigator.pop(context);
-                              })
+                          SizedBox(
+                            height: 50,
+                            width: size.width,
+                            child: MaterialButton(
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10)),
+                                color: Colors.orange,
+                                child: const Text(
+                                  "Send",
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                }),
+                          )
                         ],
                       ),
                     ));
@@ -93,7 +104,7 @@ class HomeScreen extends StatelessWidget {
               children: <Widget>[
                 const Header(),
                 Obx(() => BodyFunction()),
-                const Footer()
+                // const Footer()
               ],
             ),
           ),

@@ -16,7 +16,7 @@ class _SideMenuState extends State<SideMenu> {
   Widget build(BuildContext context) {
     return Obx(() => Container(
           height: double.infinity,
-          color: darkMood.value ? Colors.white : Colors.black,
+          color: darkMood.value ? Colors.black : Colors.white,
           child: SafeArea(
             child: SingleChildScrollView(
               padding: EdgeInsets.all(20),
@@ -68,7 +68,7 @@ class _SideMenuState extends State<SideMenu> {
                   NavItem(
                     title: 'Contact Me',
                     tapEvent: () {
-                      index.value = 2;
+                      index.value = 3;
                     },
                   ),
                   SizedBox(

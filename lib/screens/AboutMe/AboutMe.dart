@@ -25,7 +25,7 @@ class AboutMe extends StatelessWidget {
           ),
           Center(
             child: CustomTitle(
-              title: "Who I am",
+              title: "Intro",
             ),
           ),
           SizedBox(
@@ -43,7 +43,7 @@ class AboutMe extends StatelessWidget {
             padding: EdgeInsets.only(right: !isMobile(context) ? 40 : 0),
             child: Intro(size: size),
           ),
-          Center(child: CustomTitle(title: "My Skill")),
+          Center(child: CustomTitle(title: "Skill")),
           SizedBox(
             height: 10,
           ),
@@ -56,7 +56,7 @@ class AboutMe extends StatelessWidget {
 
           ///--------------------------My Education-----------------------------
 
-          Center(child: CustomTitle(title: 'Work & Education')),
+          Center(child: CustomTitle(title: 'Experience')),
 
           SizedBox(
             height: 10,

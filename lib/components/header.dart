@@ -38,7 +38,7 @@ class _HeaderState extends State<Header> {
                       message: "Theme",
                       child: IconButton(
                         onPressed: () {
-                          darkMood.toggle();
+                          darkMood.value = !darkMood.value;
                           darkMood == false
                               ? Get.changeTheme(ThemeData.light())
                               : Get.changeTheme(ThemeData.dark());

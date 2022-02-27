@@ -13,9 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      theme: ThemeData(
-          primaryColor: kPrimaryColor,
-          textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)),
+      theme: ThemeData.light(),
       themeMode: ThemeMode.light,
       darkTheme: ThemeData.dark(),
       title: 'Flutter Web',

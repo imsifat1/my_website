@@ -97,6 +97,8 @@ flutter:
     - assets/icons/WebsiteLogo1.png
     - assets/icons/WebsiteLogo2.png
     - assets/icons/playStore.png
+    - assets/icons/logo1.jpeg
+    - assets/icons/logo2.png
     - assets/icons/StackOverFlowIcon1.png
     - assets/icons/StackOverFlowIcon2.png
     

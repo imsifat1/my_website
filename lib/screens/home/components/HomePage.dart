@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_website/components/footer.dart';
 import 'package:my_website/components/header.dart';
 import 'package:my_website/components/main_button.dart';
 import 'package:my_website/responsive.dart';
@@ -84,18 +85,19 @@ class HomePage extends StatelessWidget {
                     runSpacing: 10,
                     children: <Widget>[
                       MainButton(
-                        title: 'GET STARTED',
+                        title: 'Hire Me!',
                         color: kPrimaryColor,
                         tapEvent: () {},
                       ),
                       SizedBox(width: 10),
                       MainButton(
-                        title: 'WATCH VIDEO',
+                        title: 'Download CV!',
                         color: kSecondaryColor,
                         tapEvent: () {},
                       )
                     ],
-                  )
+                  ),
+                  const Footer()
                 ],
               ),
             )),

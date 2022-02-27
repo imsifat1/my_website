@@ -11,24 +11,25 @@ class CustomTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double size = MediaQuery.of(context).size.width * 0.04;
     return Obx(() => RichText(
           text: TextSpan(children: [
             TextSpan(
-                text: '----------',
+                text: '---------',
                 style: TextStyle(
-                    fontSize: isDesktop(context) ? 40 : 25,
+                    fontSize: size,
                     fontWeight: FontWeight.w800,
                     color: darkMood == true ? Colors.white : Colors.black)),
             TextSpan(
                 text: title,
                 style: TextStyle(
-                    fontSize: isDesktop(context) ? 40 : 25,
+                    fontSize: size,
                     fontWeight: FontWeight.w800,
                     color: kPrimaryColor)),
             TextSpan(
-                text: '----------',
+                text: '---------',
                 style: TextStyle(
-                    fontSize: isDesktop(context) ? 40 : 25,
+                    fontSize: size,
                     fontWeight: FontWeight.w800,
                     color: darkMood == true ? Colors.white : Colors.black)),
           ]),
